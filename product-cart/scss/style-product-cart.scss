@@ -1,0 +1,11 @@
+@import url('.\#source\headerAndFooter.scss');
+@import url('.\#source\zero.scss');
+
+.main-content {
+    width: 100%;
+    height: 100vh;
+    flex: 1 0 auto;
+    .main-content__container {
+    }
+    z-index: 1;
+}

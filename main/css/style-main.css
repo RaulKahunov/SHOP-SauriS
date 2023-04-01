@@ -1,0 +1,8 @@
+@import url(".#sourceheaderAndFooter.scss");
+@import url(".#sourcezero.scss");
+.main-content {
+  width: 100%;
+  height: 100vh;
+  flex: 1 0 auto;
+  z-index: 1;
+}
