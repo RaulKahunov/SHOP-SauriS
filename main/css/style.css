@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 * {
   box-sizing: border-box;
@@ -97,13 +96,18 @@ html, body {
 }
 
 .header {
+  transition: all 0.8s ease-out;
   width: 100%;
-  height: 10em;
+  height: 12em;
   flex: 0 0 auto;
   position: sticky;
   left: 0;
   top: 0;
   background: rgba(42, 46, 42, 0.685);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 99;
 }
 .header .header__container {
   display: flex;
@@ -112,28 +116,38 @@ html, body {
   justify-content: center;
 }
 .header .header__title {
-  font-family: "Rubik Mono One";
-  letter-spacing: calc((1vw + 1vh) / 10);
+  font-family: "Poiret One";
+  letter-spacing: calc((1vw + 1vh) / 30);
   color: white;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
   margin: 0 auto;
   font-size: 3em;
   text-transform: uppercase;
   margin-bottom: 0.1em;
 }
+.header .header__title:hover {
+  color: rgba(240, 219, 35, 0.61);
+}
 .header .header__sub-title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: "Poiret One";
-  font-weight: 700;
-  letter-spacing: calc((1vw + 1vh) / 20);
+  text-decoration-line: underline;
+  font-weight: 400;
+  letter-spacing: calc((1vw + 1vh) / 30);
   color: white;
-  font-size: 1.3em;
+  font-size: 1.5em;
   word-spacing: 0.0001em;
+  margin-bottom: 1em;
+}
+.header .header__sub-title:hover {
+  color: rgba(240, 219, 35, 0.61);
 }
 .header .header__logo {
+  cursor: pointer;
+  display: block;
   position: absolute;
   left: 3em;
   background: grey;
@@ -142,21 +156,72 @@ html, body {
   border-radius: 50%;
   overflow: hidden;
 }
+.header .header__logo img {
+  display: block;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  border-radius: inherit;
+}
+.header .header__logo:hover {
+  transform: scale(1.3);
+}
+.header .header__logo:active {
+  transform: scale(0.7);
+}
 .header .header__burger {
   display: none;
 }
 .header .header__menu {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.header .header__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header .header__buttons .header__button {
+  cursor: pointer;
   display: inline-block;
-  border: 1px dashed black;
+  color: white;
+  margin-left: 1em;
+  text-align: center;
+  font-family: "Poiret One";
+  font-weight: 500;
+  letter-spacing: calc((1vw + 1vh) / 20);
+  padding: 1em;
+}
+.header .header__buttons .header__button:hover {
+  background: rgba(240, 219, 35, 0.61);
+  color: black;
+  font-weight: 600;
+  border-radius: 10px;
+  transform: scale(1.3);
+}
+.header .header__buttons .header__button:active {
+  background: rgba(240, 219, 35, 0.61);
+  color: black;
+  font-weight: 600;
+  border-radius: 10px;
+  transform: scale(0.9);
+}
+.header .header__tags {
+  display: none;
 }
 .main-content {
   width: 100%;
   height: 100vh;
   flex: 1 0 auto;
+  z-index: 1;
 }
 .footer {
   background: rgba(42, 46, 42, 0.685);
   width: 100%;
   height: 5em;
   flex: 0 0 auto;
+  z-index: 1;
 }
